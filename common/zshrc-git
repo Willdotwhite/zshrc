@@ -1,0 +1,4 @@
+alias gs="git status"
+alias gd="git diff"
+alias gitfuckit="git add -A && git reset --hard"
+

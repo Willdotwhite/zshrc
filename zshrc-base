@@ -1,0 +1,36 @@
+autoload colors; colors
+
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="awesomepanda"
+
+# Display red dots whilst waiting for command completion
+COMPLETION_WAITING_DOTS="true"
+
+### History
+setopt extended_history hist_no_store hist_ignore_dups hist_expire_dups_first hist_find_no_dups inc_append_history share_history hist_reduce_blanks hist_ignore_space
+export HISTFILE=~/.zsh_history
+export HISTSIZE=1000000
+export SAVEHIST=1000000
+
+# Don't count common path separators as word characters
+WORDCHARS=${WORDCHARS//[&.;\/]}
+
+# YEET
+REPORTTIME=5
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+LSOPTS='-lAvF'  # long mode, show all, natural sort, type squiggles, friendly sizes
+LLOPTS=''
+alias ls="ls $LSOPTS"
+alias ll="ls $LLOPTS | less -FX"
