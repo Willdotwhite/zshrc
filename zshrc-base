@@ -28,6 +28,8 @@ REPORTTIME=5
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+# Enable brew shell completion
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 source $ZSH/oh-my-zsh.sh
 
 LSOPTS='-lAvF'  # long mode, show all, natural sort, type squiggles, friendly sizes
