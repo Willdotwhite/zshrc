@@ -1,6 +1,10 @@
 # Turn off all beeps
 unsetopt BEEP
 
+# Set table title to just $PWD/command
+DISABLE_AUTO_TITLE="true"
+echo -ne "\e]1;\a"
+
 ### Tab completion
 
 # Force a reload of completion system if nothing matched; this fixes installing
