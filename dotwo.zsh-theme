@@ -1,6 +1,4 @@
 # Install to ~/.oh-my-zsh/custom/themes/
-local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
-
 if [[ $UID -eq 0 ]]; then
     local user_symbol='#'
 else
